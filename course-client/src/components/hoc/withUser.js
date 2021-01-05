@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 
 export const UserContext = React.createContext({
-	user: {
-		firstName: null,
-		email: null,
-	},
+	user: null,
 	setUser: null,
 });
 
 const useCurrentUser = () => {
-	const [user, setUser] = useState({ firstName: null, email: null });
+	const [user, setUser] = useState(null);
 
 	return {
 		user,

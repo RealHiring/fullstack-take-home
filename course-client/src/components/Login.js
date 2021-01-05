@@ -1,14 +1,16 @@
 import React, { useContext, useState } from 'react';
 
 import { UserContext } from './hoc/withUser';
+import axiosClient from '../axiosClient';
 
 export const Login = () => {
 	const { setUser } = useContext(UserContext);
-	const [creds, setCreds] = useState({ firstName: null, email: null });
+	const [creds, setCreds] = useState({ username: null, email: null });
 
-	const login = (e) => {
+	const login = async (e) => {
 		e.preventDefault();
-		setUser(creds);
+		const loginResponse = await axiosClient.post('/users/login', creds);
+		setUser(loginResponse.data.user);
 	};
 
 	const onChange = (e) => {
@@ -21,8 +23,8 @@ export const Login = () => {
 			<form onSubmit={login}>
 				<input
 					type='text'
-					placeholder='First Name'
-					name='firstName'
+					placeholder='Username'
+					name='username'
 					onChange={(e) => onChange(e)}
 				/>
 				<input

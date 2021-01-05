@@ -17,6 +17,9 @@ export class CourseSession {
 	description: string;
 
 	@Column()
+	content: string;
+
+	@Column()
 	courseId: number;
 
 	@ManyToOne(() => Course)

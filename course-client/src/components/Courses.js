@@ -1,7 +1,10 @@
 import React from 'react';
 
-export const Courses = () => {
-  return (
-    <h2>Courses</h2>
-  )
-}
+export const Courses = ({ user }) => {
+	return (
+		<>
+			<h1>Welcome: {user.username} </h1>
+			<h2>Courses</h2>
+		</>
+	);
+};

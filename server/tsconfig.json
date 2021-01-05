@@ -10,7 +10,7 @@
     "noImplicitAny": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "types": ["jest"],
+    "types": ["node"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },

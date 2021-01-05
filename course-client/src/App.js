@@ -8,9 +8,10 @@ import { Login } from './components/Login';
 
 function App() {
 	const { user } = useContext(UserContext);
+	console.log(user);
 	return (
 		<div className='App'>
-			{user.firstName && user.email ? <Courses /> : <Login />}
+			{!!user ? <Courses user={user} /> : <Login />}
 		</div>
 	);
 }
