@@ -4,7 +4,7 @@ Please use Javascript to code the following exercise. We know Javascript is not 
 
 #### Time Limit
 
-You will have a week to work on this exercise, however our hope is you spend no more than 3-4 hours on it.
+You will have a week to work on this exercise, however our hope is you spend no more than 3-4 hours on it. We always welcome feedback so please let us know if it is taking longer than expected.
 
 When submitting your exercise please include:
 
@@ -12,19 +12,22 @@ When submitting your exercise please include:
 
 - Any comments to explain particular logic or call out something cool!
 
-To submit your exercise, please create a repository in Github and email the link to [sara@join-real.com](mailto:sara@join-real.com). Also please email with any questions you may have. Happy Coding!
+To submit your exercise, please create a repository in Github and email the link to [eng@join-real.com](mailto:eng@join-real.com). Also please email with any questions you may have. Happy Coding!
 
 ---
 
 ## Exercise: Course Sign-up
 
-Create an application (Frontend and Backend) that allows people to sign up for courses. Courses are structured in the following way:
+Create an application (Frontend and Backend) that allows people to sign up for courses.
+## Requirements
 
-- Each course has 4 sessions, and each session's content is released on a weekly basis.
+- A user should see a list of courses and their sections. A section of a course is defined by a different start date.
 
-- A new section of the course is opened for sign up every 2 weeks.
+- A user should be able to sign up for a course section only if the start date is in the future.
 
-- There is a cap of 10 people per course section.
+- A session's content should be visible only by users who have signed up for the course section.
+
+- A section is considered full when there are 5 people in it. A user should not be able to sign up for a full section.
 
 ## Getting Started
 
@@ -75,7 +78,7 @@ Any changes you make to the server will hot reload, so no need to start/stop the
 
 ### Frontend
 
-`course-client` is a React frontend project included for your use. We are **not** judging your CSS skills, but we do want to see a user experience that makes some sense. 
+`course-client` is a React frontend project included for your use. We are not judging your CSS skills, but we do want to see an intuitive user experience. 
 
 To setup and start the app run:
 ```
@@ -83,13 +86,3 @@ yarn && yarn start
 ```
 
 You will see a `Login` component requiring a username and email. **You do not need to implement authentication. Any fake username and email will work.** This is just to give you access to a user for course signup.
-
-## Requirements
-
-- A session's content should be visible only by users who have signed up for the course.
-
-- A list of users signed up for each course section should be visible.
-
-- A user should be able to sign up and remove themselves from a course.
-
-- A section is considered full when there are 5 people in it. A user should not be able to sign up for a full section.
