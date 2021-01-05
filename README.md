@@ -86,3 +86,4 @@ yarn && yarn start
 ```
 
 You will see a `Login` component requiring a username and email. **You do not need to implement authentication. Any fake username and email will work.** This is just to give you access to a user for course signup.
+
